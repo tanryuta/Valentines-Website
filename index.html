@@ -17,7 +17,13 @@
         .btn-group {
             margin-top: 20px;
         }
-
+        .button {
+            position: absolute;
+            width: 150px;
+            height: 50px;
+            margin-right: 1600px;
+            margin-top: -900px;
+        }
     </style>
 </head>
 
@@ -28,6 +34,7 @@
         <button onclick="doYes()" id="yes-btn" class="yes-btn">Yes</button>
         <button onclick="doNo()" id="no-btn" class="no-btn">No</button>
     </div>
+    <button onClick="window.location.reload();" id="back" class="button" style="display : none">Back</button>
 
     <script>
         /* function for when yes button is pressed*/
@@ -38,6 +45,7 @@
             document.getElementById("first image").src = "happy.gif";
             document.getElementById("yes-btn").style.display = "none";
             document.getElementById("no-btn").style.display = "none";
+            document.getElementById("back").style.display = "block";
         }
 
         function doNo() {
@@ -47,6 +55,7 @@
             document.getElementById("first image").src = "sad.gif";
             document.getElementById("yes-btn").style.display = "none";
             document.getElementById("no-btn").style.display = "none";
+            document.getElementById("back").style.display = "block";
         }
     </script>
 
