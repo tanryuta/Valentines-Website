@@ -13,16 +13,17 @@ body{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-.jpg{
-    height: 100%;
-    width: 100%;
-}
-
 h2{
     text-align: center;
     font-size: 1.5em;
     color: #feaec9;
     margin: 15px 0;
+}
+
+img {
+    max-width: 200%;
+    height: 200%;
+    max-height: 300px; /* Set the desired fixed height */
 }
 
 .btn-group{
@@ -51,8 +52,18 @@ button:nth-child(1){
     background: #feaec9;
 }
 
+button:nth-child(1):hover {
+    background: white;
+    color: #feaec9;
+}
+
 button:nth-child(2){
     margin-right: -200px;
     background-color: white;
     color: #feaec9;
+}
+
+button:nth-child(2):hover {
+    background: #feaec9;
+    color: white;
 }

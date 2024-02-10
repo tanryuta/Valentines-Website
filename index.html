@@ -6,26 +6,38 @@
     <meta name="viewpoint" content="width=device-width, intial-scale=1.0">
     <title>Will you be my Valentine?</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .btn-group {
+            margin-top: 20px; /* Adjust the margin as needed */
+        }
+    </style>
 </head>
 
 <body>
-    <div class="wrapper">
-        <h2 id="question">Will you be my valentine?</h2>
-        <img class="jpg" alt="jpg" src="first.jpg">
-        <div class="btn-group">
-            <button onclick="doYes()" class="yes-btn">Yes</button>
-            <button onclick="doNo()" class="no-btn">No</button>
-        </div>
+    <h2 id="question">Will you be my valentine?</h2>
+    <img id = "first image" src="first.gif" alt="first image" title="Be my valentine?">
+    <div class="btn-group">
+        <button onclick="doYes()" class="yes-btn">Yes</button>
+        <button onclick="doNo()" class="no-btn">No</button>
     </div>
 
-    <script src="main.js">
+
+    <script>
         function doYes() {
             document.getElementById("question").innerHTML = "See you on February 14th! :)";
-            document.getElementById("jpg").innerHTML = "second.gif";
+            document.getElementById("first image").src = "happy.gif";
         }
 
         function doNo() {
             document.getElementById("question").innerHTML = "Okay, have a nice day :(";
+            document.getElementById("first image").src = "sad.gif";
         }
     </script>
 </body>
