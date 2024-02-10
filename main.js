@@ -19,5 +19,4 @@ nobtn.addEventListener("mouseover", () =>{
 
     nobtn.computedStyleMap.left = randomX + "px";
     nobtn.computedStyleMap.top = randomY + "px";
-    
 })
