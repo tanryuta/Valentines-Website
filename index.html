@@ -15,7 +15,7 @@
         }
 
         .btn-group {
-            margin-top: 20px;
+        margin-top: 20px;
         }
 
         .button {
@@ -31,32 +31,49 @@
 <body>
     <h2 id="question">Will you be my valentine?</h2>
     <img id = "first image" src="first.gif" alt="first image" title="Be my valentine?">
+
     <div class="btn-group">
-        <button onclick="doYes()" id="yes-btn" class="yes-btn">Yes</button>
-        <button onclick="doNo()" id="no-btn" class="no-btn">No</button>
+        <button onclick="doNo()" id="no" class="no">No</button>
+        <button onclick="doYes()" id="yes" class="yes">Yes</button>
     </div>
     <button onClick="window.location.reload();" id="back" class="button" style="display : none">Wait...</button>
 
     <script>
+        var x = 0;
+
+        var n = document.querySelector("button");
+
         /* function for when yes button is pressed*/
         function doYes() {
             /* change text of question accordingly to yes response */
-            document.getElementById("question").innerHTML = "See you on February 14th! :)";
+            document.getElementById("question").innerHTML = "See you on February 14th! <3 :)";
             /* change gif accordingly to yes response */
             document.getElementById("first image").src = "happy.gif";
-            document.getElementById("yes-btn").style.display = "none";
-            document.getElementById("no-btn").style.display = "none";
+            document.getElementById("yes").style.display = "none";
+            document.getElementById("no").style.display = "none";
         }
 
         function doNo() {
-            /* change text of question accordingly to no response */
-            document.getElementById("question").innerHTML = "Okay, have a nice day :(";
-            /* change gif accordingly to no response */
-            document.getElementById("first image").src = "sad.gif";
-            document.getElementById("yes-btn").style.display = "none";
-            document.getElementById("no-btn").style.display = "none";
-            document.getElementById("back").style.display = "block";
+
+            const maxWidth = window.innerWidth - 150;
+            const maxHeight = window.innerHeight - 50;
+
+            x++;
+
+            n.style.left = Math.floor(Math.random() * (maxWidth + 1)) + "px";
+            n.style.top = Math.floor(Math.random() * (maxHeight + 1)) + "px";
+
+            if (x == 10) {
+                /* change text of question accordingly to no response */
+                document.getElementById("question").innerHTML = "Okay, fine. Have a nice day :(";
+                /* change gif accordingly to no response */
+                document.getElementById("first image").src = "sad.gif";
+                document.getElementById("yes").style.display = "none";
+                document.getElementById("no").style.display = "none";
+                document.getElementById("back").style.display = "block";
+            }
         }
+    
     </script>
 
 </body>
