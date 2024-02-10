@@ -13,21 +13,19 @@
         <h2 id="question">Will you be my valentine?</h2>
         <img class="jpg" alt="jpg" src="first.jpg">
         <div class="btn-group">
-            <button onclick="doYes()"class="yes-btn">Yes</button>
+            <button onclick="doYes()" class="yes-btn">Yes</button>
             <button onclick="doNo()" class="no-btn">No</button>
         </div>
     </div>
 
     <script src="main.js">
         function doYes() {
-            document.getElementbyId("question").innerHTML = "See you on February 14th! :)";
-            
+            document.getElementById("question").innerHTML = "See you on February 14th! :)";
+            document.getElementById("jpg").innerHTML = "second.gif";
         }
 
-    </script>
-    <script>
         function doNo() {
-            document.getelementbyId("question").innerHTML = "Okay, have a nice day :(";
+            document.getElementById("question").innerHTML = "Okay, have a nice day :(";
         }
     </script>
 </body>
