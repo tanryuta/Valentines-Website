@@ -15,9 +15,9 @@
         }
 
         .btn-group {
-            margin-top: 20px; /* Adjust the margin as needed */
+            margin-top: 20px;
         }
-        
+
     </style>
 </head>
 
@@ -29,17 +29,22 @@
         <button onclick="doNo()" class="no-btn">No</button>
     </div>
 
-
     <script>
+        /* function for when yes button is pressed*/
         function doYes() {
+            /* change text of question accordingly to yes response */
             document.getElementById("question").innerHTML = "See you on February 14th! :)";
+            /* change gif accordingly to yes response */
             document.getElementById("first image").src = "happy.gif";
         }
 
         function doNo() {
+            /* change text of question accordingly to no response */
             document.getElementById("question").innerHTML = "Okay, have a nice day :(";
+            /* change gif accordingly to no response */
             document.getElementById("first image").src = "sad.gif";
         }
     </script>
+
 </body>
 </html>

@@ -31,7 +31,6 @@ img {
     height: 100%;
     display: flex;
     justify-content: center;
-    margin-top: 30px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
@@ -44,7 +43,7 @@ button{
     border-radius: 30px;
     outline: none;
     cursor: pointer;
-    box-shadow: 0 2px 4px gray;
+    box-shadow: 0 10px 0px 0px gray;
     border: 2px solid #feaec9;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
@@ -55,8 +54,13 @@ button:nth-child(1){
 }
 
 button:nth-child(1):hover {
-    background: white;
-    color: #feaec9;
+    background: #f7dde5;
+    color: white;
+}
+
+button:nth-child(1):active {
+    transform: translateY(7px);
+    box-shadow: 0px 7px 0px 0px rgb(67, 88, 93);
 }
 
 button:nth-child(2){
@@ -66,6 +70,11 @@ button:nth-child(2){
 }
 
 button:nth-child(2):hover {
-    background: #feaec9;
+    background: #f7dde5;
     color: white;
+}
+
+button:nth-child(2):active {
+    transform: translateY(7px);
+    box-shadow: 0px 7px 0px 0px rgb(67, 88, 93);
 }
