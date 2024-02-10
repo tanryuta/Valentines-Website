@@ -14,7 +14,7 @@
         <img class="jpg" alt="jpg" src="first.jpg">
         <div class="btn-group">
             <button onclick="doYes()"class="yes-btn">Yes</button>
-            <button onclick="doNo()"class="no-btn">No</button>
+            <button onclick="doNo()" class="no-btn">No</button>
         </div>
     </div>
 
@@ -24,8 +24,10 @@
             
         }
 
+    </script>
+    <script>
         function doNo() {
-
+            document.getelementbyId("question").innerHTML = "Okay, have a nice day :(";
         }
     </script>
 </body>
