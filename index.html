@@ -25,8 +25,8 @@
     <h2 id="question">Will you be my valentine?</h2>
     <img id = "first image" src="first.gif" alt="first image" title="Be my valentine?">
     <div class="btn-group">
-        <button onclick="doYes()" class="yes-btn">Yes</button>
-        <button onclick="doNo()" class="no-btn">No</button>
+        <button onclick="doYes()" id="yes-btn" class="yes-btn">Yes</button>
+        <button onclick="doNo()" id="no-btn" class="no-btn">No</button>
     </div>
 
     <script>
@@ -36,6 +36,8 @@
             document.getElementById("question").innerHTML = "See you on February 14th! :)";
             /* change gif accordingly to yes response */
             document.getElementById("first image").src = "happy.gif";
+            document.getElementById("yes-btn").style.display = "none";
+            document.getElementById("no-btn").style.display = "none";
         }
 
         function doNo() {
@@ -43,6 +45,8 @@
             document.getElementById("question").innerHTML = "Okay, have a nice day :(";
             /* change gif accordingly to no response */
             document.getElementById("first image").src = "sad.gif";
+            document.getElementById("yes-btn").style.display = "none";
+            document.getElementById("no-btn").style.display = "none";
         }
     </script>
 
