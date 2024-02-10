@@ -10,14 +10,23 @@
 
 <body>
     <div class="wrapper">
-        <h2 class="question">Will you be my valentine?</h2>
+        <h2 id="question">Will you be my valentine?</h2>
         <img class="jpg" alt="jpg" src="first.jpg">
         <div class="btn-group">
-            <button class="yes-btn">Yes</button>
-            <button class="no-btn">No</button>
+            <button onclick="doYes()"class="yes-btn">Yes</button>
+            <button onclick="doNo()"class="no-btn">No</button>
         </div>
     </div>
 
-    <script src="main.js"></script>
+    <script src="main.js">
+        function doYes() {
+            document.getElementbyId("question").innerHTML = "See you on February 14th! :)";
+            
+        }
+
+        function doNo() {
+
+        }
+    </script>
 </body>
 </html>
